@@ -1,0 +1,10 @@
+def print_formatted(number):
+    # your code goes here
+    pad = number.bit_length()
+    for i in range(1,number+1):
+        print("{} {} {} {}".format(str(i).rjust(pad), oct(i).split("o")[1].rjust(pad),
+                                   hex(i).split("x")[1].upper().rjust(pad),bin(i).split("b")[1].rjust(pad)))
+    
+if __name__ == '__main__':
+    n = int(input())
+    print_formatted(n)
